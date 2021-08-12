@@ -1,0 +1,14 @@
+---
+- hosts: all
+#  become: yes
+#  become_method: "sudo"
+  tasks:
+   - name: copy data
+     ansible.builtin.copy:
+       content: "New Testing file"
+       dest: /bk/test.txt
+#     shell: "df -h"
+#     register: shell_output
+#     copy:
+#       dest: /bk/resolve.conf
+#       content: "Ths is copy testing using Ansible Tower Playbook \n"  

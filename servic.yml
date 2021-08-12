@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+   - name: Populate service status
+     ansible.builtin.service:
+       name: sshd
+       state: reloaded
+#
+#   - name: Print service facts
+#     ansible.builtin.debug:
+#       var: ansible_facts.services

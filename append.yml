@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+    - name:  Append file content
+      ansible.builtin.lineinfile:
+        path: /bk/newfile
+        line: 192.168.1.209 
+        create: yes
